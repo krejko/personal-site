@@ -48,8 +48,8 @@ p {
 }
 
 .background-gradient {
-  background-image: -webkit-gradient(linear, top right, bottom left, from(rgb(9, 121, 65)), to(rgba(41, 56, 70, 1)));
-  background-image: linear-gradient(to bottom right, rgba(9, 121, 65, 1), rgba(41, 56, 70, 1));
+  background-image: -webkit-gradient(linear, top right, bottom left, from(rgb(9, 121, 65)), to(#293846));
+  background-image: linear-gradient(to bottom right, #097941, #293846);
   background-color: #2f4050;
   color: white;
 }
@@ -204,7 +204,7 @@ $border: 3px;
     z-index: -1;
     margin: -$border; /* !importanté */
     border-radius: inherit; /* !importanté */
-    background: linear-gradient(to bottom right, rgba(9, 121, 65, 1), rgba(41, 56, 70, 1));
+    background: linear-gradient(to bottom right, #097941, #293846);
   }
   &:hover {
     background: transparent;

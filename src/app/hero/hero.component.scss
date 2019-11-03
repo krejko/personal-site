@@ -1,12 +1,16 @@
 .hero-content {
   height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile-picture {
   border-radius: 100px;
   border: 3px solid #bbbbbb;
   object-fit: contain;
-  max-width: 150px;
-  height: auto;
+  width: 150px;
+  height: 150px;
   margin: 120px 0 80px 0;
 }
