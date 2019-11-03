@@ -28,6 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/libraries/fontawesome/css/all.min.css",
+              "src/grid.css",
+              "src/margins-padding.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -119,6 +122,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "personal"
 }
