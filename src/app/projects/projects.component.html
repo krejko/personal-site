@@ -1,0 +1,12 @@
+<section class="">
+    <h1>My Projects</h1>
+    <div class="content-padding">
+        <div class="flex-grid">
+            <div *ngFor="let project of projects; let i = index;" class="card">
+                <div class="card-content rounded-corners" [ngStyle]="project.style">
+                    <img [src]="project.logo" [alt]="project.description">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

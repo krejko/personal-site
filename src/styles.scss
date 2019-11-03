@@ -4,6 +4,16 @@ body {
   margin: 0 -5px;
 }
 
+@mixin width {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-padding {
+  @include width;
+}
+
 p,
 li {
   line-height: 1.75em;
@@ -38,9 +48,7 @@ $border-color: #dddddd;
 $border-radius: 10px;
 
 .info-box {
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  @include width;
   margin-bottom: 50px;
   border-radius: $border-radius;
   border: 1px solid $border-color;
@@ -79,7 +87,7 @@ $border-radius: 10px;
     border-top-right-radius: $border-radius;
   }
   .row > *:last-child {
-    border-bottom-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
     border-bottom-right-radius: $border-radius;
   }
 }
@@ -92,4 +100,38 @@ ul {
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
+}
+
+/* Flex Grid */
+
+$grid-spacing: 0.75em;
+
+.flex-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: -$grid-spacing;
+  box-sizing: border-box;
+}
+
+.flex-grid > * {
+  padding: $grid-spacing;
+}
+
+.card {
+  max-width: 33.3%;
+  max-height: 300px;
+}
+
+.card-content {
+  padding: 25px;
+}
+.card-content > img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.rounded-corners {
+  border-radius: $border-radius;
 }
