@@ -67,6 +67,31 @@ export class OrganizationsComponent implements OnInit {
       logo: "./assets/images/organizations/gsma-logo.jpg",
       link: ''
     },
+    {
+      name: 'HaCon',
+      logo: "./assets/images/organizations/hacon-logo.png",
+      link: ''
+    },
+    {
+      name: 'NY Waterway',
+      logo: "./assets/images/organizations/nyw-logo.jpg",
+      link: ''
+    },
+    {
+      name: 'NYC Ferry',
+      logo: "./assets/images/organizations/nyc-ferry-logo.png",
+      link: ''
+    },
+    {
+      name: 'Capital Metro Transit Authority',
+      logo: "./assets/images/organizations/capmetro-logo.jpg",
+      link: ''
+    },
+    {
+      name: 'NICTD',
+      logo: "./assets/images/organizations/nictd-logo.png",
+      link: ''
+    }
   ]
 
   constructor() { }
