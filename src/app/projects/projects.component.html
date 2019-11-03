@@ -1,12 +1,16 @@
-<section class="">
+<section class="spacing-xxl">
     <h1>Projects I've Worked On</h1>
     <div class="content-padding">
-        <div class="flex-grid">
-            <div *ngFor="let project of projects; let i = index;" class="card">
-                <div class="card-content rounded-corners" [ngStyle]="project.style">
-                    <img [src]="project.logo" [alt]="project.description">
+        <div class="flex-grid grid-spacing-md">
+            <ng-container *ngFor="let project of projects; let i = index;">
+                <div *ngIf="i < displayLimit || showAll" class="third-width">
+                    <div class="card-content rounded-corners" [ngStyle]="project.style">
+                        <img [src]="project.logo" [alt]="project.description">
+                    </div>
                 </div>
-            </div>
+            </ng-container>
         </div>
     </div>
+    <button class="btn btn-primary spacing-xs" type="custom" (click)="showAll = !showAll">See
+        {{showAll ? "Less" : "All"}}</button>
 </section>

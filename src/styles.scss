@@ -14,6 +14,28 @@ body {
   @include width;
 }
 
+.spacing-xxs {
+  margin: 1em auto !important;
+}
+.spacing-xs {
+  margin: 2em auto !important;
+}
+.spacing-sm {
+  margin: 3em auto !important;
+}
+.spacing-md {
+  margin: 4em auto !important;
+}
+.spacing-lg {
+  margin: 5em auto !important;
+}
+.spacing-xl {
+  margin: 7em auto !important;
+}
+.spacing-xxl {
+  margin: 9em auto !important;
+}
+
 p,
 li {
   line-height: 1.75em;
@@ -104,22 +126,36 @@ ul {
 
 /* Flex Grid */
 
-$grid-spacing: 0.75em;
+$grid-spacing-md: 0.75em;
+$grid-spacing-xl: 1.75em;
 
 .flex-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: -$grid-spacing;
   box-sizing: border-box;
 }
 
-.flex-grid > * {
-  padding: $grid-spacing;
+.grid-spacing-md.flex-grid {
+  padding: -$grid-spacing-md;
 }
 
-.card {
+.grid-spacing-md.flex-grid > * {
+  padding: $grid-spacing-md;
+}
+.grid-spacing-xl.flex-grid {
+  padding: -$grid-spacing-xl;
+}
+
+.grid-spacing-xl.flex-grid > * {
+  padding: $grid-spacing-xl;
+}
+
+.third-width {
   width: 33.3%;
+}
+.quarter-width {
+  width: 25%;
 }
 
 .card-content {
@@ -133,4 +169,45 @@ $grid-spacing: 0.75em;
 
 .rounded-corners {
   border-radius: $border-radius;
+}
+
+/* Buttons */
+$border: 3px;
+.btn {
+  border-radius: 100%;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  max-width: 22em;
+
+  position: relative;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+
+  font-weight: bold;
+  font-size: 17px;
+  color: #385f46;
+  background: white;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+  border-radius: 6em;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(to bottom right, rgba(9, 121, 65, 1), rgba(41, 56, 70, 1));
+  }
+  &:hover {
+    background: transparent;
+    color: white;
+  }
 }

@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  /* TODO:
+  - Show only top 6 until show all button is pressed
+  - Add hover over states
+  - 'More info' pane with links to articles and demos
+  */
+
+  showAll = false;
+  displayLimit = 6
+
   projects = [
     {
       name: "NFS MAPS",

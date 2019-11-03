@@ -1,6 +1,16 @@
-<section>
-    <h2>I'm proud to have collaborated with these awesome organizations</h2>
-    <div class="flex-grid">
-        <div *ngFor="let project of projects; let i = index;"></div>
+<section class="spacing-xxl">
+    <h2>I'm proud to have collaborated with<br>these awesome organizations:</h2>
+    <div class="content-padding">
+        <div class="flex-grid grid-spacing-xl">
+            <ng-container *ngFor="let org of organizations; let i = index;">
+                <div *ngIf="i < displayLimit || showAll" class="quarter-width">
+                    <div class="card-content rounded-corners" [ngStyle]="org.style">
+                        <img [src]="org.logo" [alt]="org.name">
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
+    <button class="btn btn-primary spacing-xs" type="custom" (click)="showAll = !showAll">See
+        {{showAll ? "Less" : "All"}}</button>
 </section>
