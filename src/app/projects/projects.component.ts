@@ -12,7 +12,7 @@ export class ProjectsComponent implements OnInit {
       name: "NFS MAPS",
       dates: "",
       logo: "./assets/images/projects/nfsmaps.png",
-      style: { "background-color": "rgba(34, 51, 65, 1)" },
+      style: { "background": "linear-gradient(to bottom left , #303B4A, #2C3743)" },
       description: "",
       link: "https://www.nfsmaps.com.ng/"
     },
@@ -25,58 +25,90 @@ export class ProjectsComponent implements OnInit {
       link: "http://taxation-tool.s3-website-us-east-1.amazonaws.com"
     },
     {
-      name: "PAYGo Solar POC",
+      name: "iWorker Website",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/iworker-project.png",
+      style: { "background": "linear-gradient(to bottom right, #AECECB,#8DB7B4, #76ABA6, #699795, #46666A, #243742)" },
+      description: "",
+      link: "https://www.iworkerproject.org"
+    },
+    {
+      name: "Truthalizer.ai",
+      dates: "",
+      logo: "./assets/images/projects/truthalizer.png",
+      style: { "background-color": "#eeeeee", "border": "1px solid #bbbbbb" },
       description: "",
       link: ""
     },
     {
-      name: "iWorker Website",
+      name: "PAYGo Solar POC",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/paygo-lead-finder.png",
+      style: { "background-color": "#139e80" },
       description: "",
       link: ""
     },
     {
       name: "Leaf USSD Prototype",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/leaf-logo.png",
+      style: { "background-color": "#ffffff", "border": "1px solid #bbbbbb" },
       description: "",
       link: ""
     },
     {
-      name: "Truthalizer.ai",
+      name: "GSMA Mobile Money API Audit",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/leaf-logo.png",
+      style: { "background-color": "#ffffff" },
       description: "",
       link: ""
     },
     {
-      name: "R2A Vendor Tracker",
+      name: "Optix Report",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/optix.png",
+      style: { "background-color": "#4666BB" },
+      description: "",
+      link: "https://optixproject.org/report"
+    },
+    {
+      name: "R2A Vendor Database",
+      dates: "",
+      logo: "./assets/images/projects/r2a-vendor-db.png",
+      style: { "background-color": "#0a2d37" },
+      description: "",
+      link: ""
+    },
+    {
+      name: "R2A Deployment Tracker",
+      dates: "",
+      logo: "./assets/images/projects/r2a-regtech-tracker.png",
+      style: { "background-color": "#0a2d37" },
       description: "",
       link: ""
     },
     {
       name: "H2OME Integration",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/h2ome.png",
+      style: { "background-color": "#3F3EBA" },
+      description: "",
+      link: ""
+    },
+    {
+      name: "AI Readiness Toolkit",
+      dates: "",
+      logo: "./assets/images/projects/ai-readiness-toolkit.png",
+      style: { "background": "linear-gradient(to left , #FDB850, #F3C551, #E8D34F, #E4CF50, #E1CB51, #D2AA57)" },
       description: "",
       link: ""
     },
     {
       name: "DataStack Prototype",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/datastack.png",
+      style: { "background-image": "url('./assets/images/projects/header-profile.png')", "background-color": "#2f4050", "background-size": "cover" },
       description: "",
       link: ""
     },
@@ -89,7 +121,7 @@ export class ProjectsComponent implements OnInit {
       link: ""
     },
     {
-      name: "App Generation Platform",
+      name: "Bytemark Mobile App Generation Platform",
       dates: "",
       logo: "",
       style: "",
