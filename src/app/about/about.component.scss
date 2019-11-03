@@ -1,0 +1,12 @@
+.scroll-down {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about > p {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
