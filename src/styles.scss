@@ -41,6 +41,7 @@ $border-radius: 10px;
   max-width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   border-radius: $border-radius;
   border: 1px solid $border-color;
 }
@@ -54,17 +55,33 @@ $border-radius: 10px;
   background-color: white;
   padding: 25px;
 }
-.row > *:not(:last-child) {
-  border-right: 1px solid $border-color;
-}
+@media (min-width: 768px) {
+  .row > *:not(:last-child) {
+    border-right: 1px solid $border-color;
+  }
 
-.row > *:first-child {
-  border-top-left-radius: $border-radius;
-  border-bottom-left-radius: $border-radius;
+  .row > *:first-child {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+  .row > *:last-child {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
 }
-.row > *:last-child {
-  border-top-right-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
+@media (max-width: 768px) {
+  .row > *:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .row > *:first-child {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+  .row > *:last-child {
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
 }
 
 ul {
