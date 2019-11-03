@@ -57,10 +57,10 @@ export class ProjectsComponent implements OnInit {
       link: ""
     },
     {
-      name: "GSMA Mobile Money API Audit",
+      name: "GSMA Mobile Money API Review",
       dates: "",
-      logo: "./assets/images/projects/leaf-logo.png",
-      style: { "background-color": "#ffffff" },
+      logo: "./assets/images/projects/gsma-mobile-money-review.png",
+      style: { "background-color": "#ffffff", "border": "1px solid #000000" },
       description: "",
       link: ""
     },
@@ -115,16 +115,16 @@ export class ProjectsComponent implements OnInit {
     {
       name: "Optimetriks Computer Vision",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/optimetriks.png",
+      style: { "background-color": "#ffffff", "border": "1px solid #bbbbbb" },
       description: "",
       link: ""
     },
     {
-      name: "Bytemark Mobile App Generation Platform",
+      name: "Bytemark Mobile App Generator",
       dates: "",
-      logo: "",
-      style: "",
+      logo: "./assets/images/projects/bytemark-mobile-app-generator.png",
+      style: { "background": "linear-gradient(to bottom right, #5C97D9,#5183C7, #4B67AF, #5C4B9B, #65328E, #4D2663)" },
       description: "",
       link: ""
     }
