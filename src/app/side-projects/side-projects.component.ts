@@ -31,7 +31,7 @@ export class SideProjectsComponent implements OnInit {
       circleLogo: "./assets/images/side-projects/tracks-logo-circle.png",
       textLogo: "./assets/images/side-projects/tracks-logo-text.png",
       description: "TRACKS Music is where ...",
-      link: "https://soundcloud.com/tracks-music"
+      link: "http://tracks.media"
     }
   ]
 
