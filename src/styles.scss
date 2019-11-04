@@ -14,6 +14,10 @@ body {
   @include width;
 }
 
+a {
+  text-decoration: none;
+}
+
 .spacing-xxs {
   margin: 1em auto !important;
 }
@@ -70,10 +74,10 @@ $border-color: #dddddd;
 $border-radius: 10px;
 
 .info-box {
-  @include width;
   margin-bottom: 50px;
   border-radius: $border-radius;
   border: 1px solid $border-color;
+  background-color: white;
 }
 
 .info-box > * > i {
@@ -82,7 +86,6 @@ $border-radius: 10px;
 }
 
 .row > * {
-  background-color: white;
   padding: 25px;
 }
 @media (min-width: 768px) {
@@ -137,14 +140,14 @@ $grid-spacing-xl: 1.75em;
 }
 
 .grid-spacing-md.flex-grid {
-  padding: -$grid-spacing-md;
+  margin: -$grid-spacing-md;
 }
 
 .grid-spacing-md.flex-grid > * {
   padding: $grid-spacing-md;
 }
 .grid-spacing-xl.flex-grid {
-  padding: -$grid-spacing-xl;
+  margin: -$grid-spacing-xl;
 }
 
 .grid-spacing-xl.flex-grid > * {
@@ -178,7 +181,7 @@ $border: 3px;
 }
 
 .btn-primary {
-  display: flex;
+  display: flex !important;
   align-items: center;
   margin: auto;
   max-width: 22em;
@@ -204,10 +207,32 @@ $border: 3px;
     z-index: -1;
     margin: -$border; /* !importanté */
     border-radius: inherit; /* !importanté */
-    background: linear-gradient(to bottom right, #097941, #293846);
+    background: linear-gradient(to bottom right, #097941, #293846) !important;
   }
   &:hover {
     background: transparent;
     color: white;
+  }
+}
+.btn-secondary {
+  display: flex !important;
+  align-items: center;
+  margin: auto;
+  max-width: 22em;
+
+  position: relative;
+  padding: 0.5em 2em;
+  box-sizing: border-box;
+
+  font-weight: bold;
+  font-size: 17px;
+  color: #385f46;
+  background: white;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+  border-radius: 6em;
+
+  &:hover {
+    text-decoration: underline;
   }
 }

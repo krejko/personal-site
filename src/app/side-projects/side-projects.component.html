@@ -1,0 +1,28 @@
+<section class="spacing-xxl">
+    <div class="background-gradient ">
+        <div class="content-padding">
+            <h1>Side Projects</h1>
+            <p>When I am not activly working on a client project, you can find me working on one of my side projects:
+            </p>
+
+            <div class="overlap-spacing"></div>
+        </div>
+    </div>
+    <div class="content-padding overlap-previous">
+        <div class="flex-grid  grid-spacing-md">
+            <ng-container *ngFor="let project of projects; let i = index;">
+                <div class=" third-width">
+                    <div class="card-content info-box rounded-corners">
+                        <img class="circle-logo" [src]="project.circleLogo" [alt]="project.description">
+                        <img [src]="project.textLogo" [alt]="project.description">
+                        <p>{{project.description}}</p>
+                        <a target="_blank" [href]="project.link">
+                            <button class="btn btn-secondary spacing-xs" type="custom">Learn More</button>
+                        </a>
+
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
