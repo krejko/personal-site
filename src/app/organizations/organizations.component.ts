@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResumeService } from '../services/resume.service';
 
 @Component({
   selector: 'organizations',
@@ -10,91 +11,9 @@ export class OrganizationsComponent implements OnInit {
   showAll = false;
   displayLimit = 8
 
-  organizations = [
-    {
-      name: 'BFA',
-      logo: "./assets/images/organizations/bfa-logo.png",
-      link: ''
-    },
-    {
-      name: 'Safe Water Network',
-      logo: "./assets/images/organizations/swn-logo.png",
-      link: ''
-    },
-    {
-      name: 'Turaco',
-      logo: "./assets/images/organizations/turaco-logo.png",
-      link: ''
-    },
-    {
-      name: 'Leaf',
-      logo: "./assets/images/organizations/leaf-logo.png",
-      link: ''
-    },
-    {
-      name: 'Mastercard Foundation',
-      logo: "./assets/images/organizations/mcf-logo.png",
-      link: ''
-    },
-    {
-      name: 'Rockefeller Philanthropy Advisors',
-      logo: "./assets/images/organizations/rpa-logo.png",
-      link: ''
-    },
-    {
-      name: 'Bill and Melinda Gates Foundation',
-      logo: "./assets/images/organizations/bmgf-logo.png",
-      link: ''
-    },
-
-    {
-      name: 'Bytemark',
-      logo: "./assets/images/organizations/bytemark-logo.jpg",
-      link: ''
-    },
-    {
-      name: 'Central Bank of Nigeria',
-      logo: "./assets/images/organizations/cbn-logo.png",
-      link: ''
-    },
-    {
-      name: 'Nigeria Interbank Settlement System',
-      logo: "./assets/images/organizations/nibss-logo.png",
-      link: ''
-    },
-    {
-      name: 'GSMA',
-      logo: "./assets/images/organizations/gsma-logo.jpg",
-      link: ''
-    },
-    {
-      name: 'HaCon',
-      logo: "./assets/images/organizations/hacon-logo.png",
-      link: ''
-    },
-    {
-      name: 'NY Waterway',
-      logo: "./assets/images/organizations/nyw-logo.jpg",
-      link: ''
-    },
-    {
-      name: 'NYC Ferry',
-      logo: "./assets/images/organizations/nyc-ferry-logo.png",
-      link: ''
-    },
-    {
-      name: 'Capital Metro Transit Authority',
-      logo: "./assets/images/organizations/capmetro-logo.jpg",
-      link: ''
-    },
-    {
-      name: 'NICTD',
-      logo: "./assets/images/organizations/nictd-logo.png",
-      link: ''
-    }
-  ]
-
-  constructor() { }
+  constructor(
+    private resumeService: ResumeService
+  ) { }
 
   ngOnInit() {
   }

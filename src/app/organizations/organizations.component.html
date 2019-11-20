@@ -2,7 +2,7 @@
     <h2>I'm proud to have collaborated with<br>these awesome organizations:</h2>
     <div class="content-padding">
         <div class="flex-grid grid-spacing-xl">
-            <ng-container *ngFor="let org of organizations; let i = index;">
+            <ng-container *ngFor="let org of resumeService.resume.organizations; let i = index;">
                 <div *ngIf="i < displayLimit || showAll" class="quarter-width">
                     <div class="card-content rounded-corners" [ngStyle]="org.style">
                         <img [src]="org.logo" [alt]="org.name">

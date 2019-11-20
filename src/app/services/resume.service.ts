@@ -13,6 +13,7 @@ export class ResumeService {
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=1837361825&single=true&output=csv",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=1847563364&single=true&output=csv",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=497744871&single=true&output=csv",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=239821050&single=true&output=csv"
   ]
 
   resume = {
@@ -37,12 +38,14 @@ export class ResumeService {
             return e
           })
           acc.experience = val
-        } else if (idx = 2) {
+        } else if (idx === 2) { // Projects
           val = val.map(e => {
             e["style"] = JSON.parse(e["style"])
             return e
           })
           acc.projects = val
+        } else if (idx === 3) {
+          acc.organizations = val
         }
         return acc
       }, this.resume)
