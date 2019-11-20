@@ -2,13 +2,12 @@
   text-align: center;
   height: 100px;
   line-height: 25px;
-  //   background: #364d79;
-  //   color: #fff;
+  padding: 35px 10%;
   overflow: hidden;
 }
 
 .quote {
-  max-width: 80%;
+  //   max-width: 80%;
   margin: auto;
 }
 
@@ -26,6 +25,7 @@
   background-color: #385f46;
 }
 
+::ng-deep .ant-carousel,
 ::ng-deep .ant-carousel .slick-list .slick-slide,
 ::ng-deep .ant-carousel .slick-track,
 ::ng-deep .ant-carousel .slick-slider .slick-list {
