@@ -55,7 +55,16 @@ p {
   background-image: -webkit-gradient(linear, top right, bottom left, from(rgb(9, 121, 65)), to(#293846));
   background-image: linear-gradient(to bottom right, #097941, #293846);
   background-color: #2f4050;
-  color: white;
+  color: white !important;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: white !important;
+  }
 }
 
 /* overlap */
