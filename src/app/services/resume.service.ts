@@ -30,6 +30,10 @@ export class ResumeService {
         if (idx === 0) { // About
           acc.about = this.arrayToDict(val, "key", "value")['about']
         } else if (idx === 1) { // Experience
+          val = val.map(e => {
+            e["supportingDetails"] = e["supportingDetails"].split(",").map(item => item.trim())
+            return e
+          })
           acc.experience = val
         }
         return acc
