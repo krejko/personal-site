@@ -2,7 +2,7 @@
     <h1>Projects I've Worked On</h1>
     <div class="content-padding">
         <div class="flex-grid grid-spacing-md">
-            <ng-container *ngFor="let project of projects; let i = index;">
+            <ng-container *ngFor="let project of resumeService.resume.projects; let i = index;">
                 <div *ngIf="i < displayLimit || showAll" class="third-width">
                     <div class="card-content rounded-corners" [ngStyle]="project.style">
                         <img [src]="project.logo" [alt]="project.description">
