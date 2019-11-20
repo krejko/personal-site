@@ -1,0 +1,33 @@
+[nz-carousel-content] {
+  text-align: center;
+  height: 100px;
+  line-height: 25px;
+  //   background: #364d79;
+  //   color: #fff;
+  overflow: hidden;
+}
+
+.quote {
+  max-width: 80%;
+  margin: auto;
+}
+
+.profile-img {
+  margin: 25px auto;
+
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 100%;
+}
+
+::ng-deep .ant-carousel .slick-dots li button,
+::ng-deep .ant-carousel .slick-dots li.slick-active button {
+  background-color: #385f46;
+}
+
+::ng-deep .ant-carousel .slick-list .slick-slide,
+::ng-deep .ant-carousel .slick-track,
+::ng-deep .ant-carousel .slick-slider .slick-list {
+  height: unset !important;
+}

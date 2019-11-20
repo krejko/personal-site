@@ -13,13 +13,18 @@ export class ResumeService {
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=1837361825&single=true&output=csv",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=1847563364&single=true&output=csv",
     "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=497744871&single=true&output=csv",
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=239821050&single=true&output=csv"
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=239821050&single=true&output=csv",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=81447926&single=true&output=csv",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSExAuVSyBExZ5gBD2-vvVPcF5YGsm50qy2qzTVlAGwSpiwxPd80lMnIXyZW_pcJKCZyHhBlZyyhRT0/pub?gid=2009638069&single=true&output=csv"
   ]
 
   resume = {
     about: undefined,
     experience: undefined,
-    projects: undefined
+    projects: undefined,
+    organizations: undefined,
+    sideProjects: undefined,
+    testimonials: undefined
   }
 
   constructor() {
@@ -46,6 +51,10 @@ export class ResumeService {
           acc.projects = val
         } else if (idx === 3) {
           acc.organizations = val
+        } else if (idx === 4) {
+          acc.sideProjects = val
+        } else if (idx === 5) {
+          acc.testimonials = val
         }
         return acc
       }, this.resume)

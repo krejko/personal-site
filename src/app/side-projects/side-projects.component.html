@@ -10,7 +10,7 @@
     </div>
     <div class="content-padding overlap-previous">
         <div class="flex-grid  grid-spacing-md">
-            <ng-container *ngFor="let project of projects; let i = index;">
+            <ng-container *ngFor="let project of resumeService.resume.sideProjects; let i = index;">
                 <div class=" third-width">
                     <div class="card-content info-box rounded-corners">
                         <img class="circle-logo" [src]="project.circleLogo" [alt]="project.description">
