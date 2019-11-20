@@ -4,9 +4,11 @@
         <div class="flex-grid grid-spacing-xl">
             <ng-container *ngFor="let org of resumeService.resume.organizations; let i = index;">
                 <div *ngIf="i < displayLimit || showAll" class="quarter-width">
-                    <div class="card-content rounded-corners" [ngStyle]="org.style">
-                        <img [src]="org.logo" [alt]="org.name">
-                    </div>
+                    <a target="_blank" [href]="org.link">
+                        <div class="card-content rounded-corners">
+                            <img [src]="org.logo" [alt]="org.name">
+                        </div>
+                    </a>
                 </div>
             </ng-container>
         </div>
