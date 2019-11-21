@@ -3,7 +3,7 @@
     <div class="content-padding">
         <div class="flex-grid grid-spacing-md">
             <ng-container *ngFor="let project of resumeService.resume.projects; let i = index;">
-                <div *ngIf="i < displayLimit || showAll" class="third-width">
+                <div (click)="modal.open(project)" *ngIf="i < displayLimit || showAll" class="third-width">
                     <div class="card-content rounded-corners" [ngStyle]="project.style">
                         <img [src]="project.logo" [alt]="project.description">
                     </div>
@@ -14,3 +14,5 @@
     <button class="btn btn-primary spacing-xs" type="custom" (click)="showAll = !showAll">See
         {{showAll ? "Less" : "All"}}</button>
 </section>
+
+<project-modal #modal></project-modal>

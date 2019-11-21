@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ResumeService } from '../services/resume.service';
+import { ProjectModalComponent } from './project-modal/project-modal.component';
 
 @Component({
   selector: 'projects',
@@ -9,6 +10,7 @@ import { ResumeService } from '../services/resume.service';
 export class ProjectsComponent implements OnInit {
 
   showAll = false;
+  @ViewChild('modal', { static: false }) modal: ProjectModalComponent
   displayLimit = 6
 
   constructor(

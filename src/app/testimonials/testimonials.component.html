@@ -1,13 +1,15 @@
-<H1>
-    Testimonials<br>
-    <small>Some nice things people I've worked with have said:</small>
-</H1>
+<section>
+    <H1>
+        Testimonials<br>
+        <small>Some nice things people I've worked with have said:</small>
+    </H1>
 
-<nz-carousel nzEffect="scrollx">
-    <div nz-carousel-content class="content-padding" *ngFor="let testimonial of resumeService.resume.testimonials">
-        <img class="profile-img" [src]="testimonial.photo">
-        <p class="quote p-b-md">"{{testimonial.testimonial}}"</p>
-        <span>{{testimonial.name}}</span>
-        <p>{{testimonial.position}}</p>
-    </div>
-</nz-carousel>
+    <nz-carousel nzEffect="scrollx">
+        <div nz-carousel-content class="content-padding" *ngFor="let testimonial of resumeService.resume.testimonials">
+            <img class="profile-img" [src]="testimonial.photo">
+            <p class="quote p-b-md">"{{testimonial.testimonial}}"</p>
+            <span>{{testimonial.name}}</span>
+            <p>{{testimonial.position}}</p>
+        </div>
+    </nz-carousel>
+</section>

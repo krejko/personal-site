@@ -1,7 +1,18 @@
 body {
   font-family: "lato";
-  text-align: center;
   margin: 0 -5px;
+  margin: 0;
+  color: unset;
+  font-size: unset;
+  font-variant: unset;
+  line-height: unset;
+  background-color: unset;
+  -webkit-font-feature-settings: unset;
+  font-feature-settings: unset;
+}
+
+section {
+  text-align: center;
 }
 
 @mixin width {
@@ -48,6 +59,7 @@ li {
 }
 
 p {
+  margin-top: unset;
   margin-bottom: 35px;
 }
 

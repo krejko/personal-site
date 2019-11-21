@@ -14,6 +14,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 /** config angular i18n **/
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
+import { ProjectModalComponent } from './projects/project-modal/project-modal.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -24,7 +25,8 @@ registerLocaleData(en);
     ProjectsComponent,
     OrganizationsComponent,
     SideProjectsComponent,
-    TestimonialsComponent
+    TestimonialsComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
