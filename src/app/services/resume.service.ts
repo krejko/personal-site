@@ -54,6 +54,10 @@ export class ResumeService {
         } else if (idx === 4) {
           acc.sideProjects = val
         } else if (idx === 5) {
+          val = val.map(e => {
+            e["testimonial"] = JSON.parse(e["testimonial"])
+            return e
+          })
           acc.testimonials = val
         }
         return acc
