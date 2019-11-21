@@ -13,7 +13,7 @@
 
     <div class="row info-box content-padding overlap-previous">
         <div *ngFor="let exp of resumeService.resume.experience" class="col-12 col-md-4">
-            <i [ngClass]="exp.positionIcon"></i>
+            <i [ngClass]="exp.positionIcon" class="spacing-xxs"></i>
             <h3>{{exp.position}}</h3>
             <p>{{exp.description}}</p>
             <h4>{{exp.skillsTitle}}</h4>
