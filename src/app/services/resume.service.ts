@@ -38,26 +38,17 @@ export class ResumeService {
         if (idx === 0) { // About
           acc.about = this.arrayToDict(val, "key", "value")['about']
         } else if (idx === 1) { // Experience
-          val = val.map(e => {
-            e["supportingDetails"] = e["supportingDetails"].split(",").map(item => item.trim())
-            return e
-          })
+          val = this.split(val, "supportingDetails")
           acc.experience = val
         } else if (idx === 2) { // Projects
-          val = val.map(e => {
-            e["style"] = JSON.parse(e["style"])
-            return e
-          })
+          val = this.parse(val, "style")
           acc.projects = val
         } else if (idx === 3) {
           acc.organizations = val
         } else if (idx === 4) {
           acc.sideProjects = val
         } else if (idx === 5) {
-          val = val.map(e => {
-            e["testimonial"] = JSON.parse(e["testimonial"])
-            return e
-          })
+          val = this.parse(val, "testimonial")
           acc.testimonials = val
         }
         return acc
@@ -66,6 +57,20 @@ export class ResumeService {
 
     }, (error) => {
       console.warn(error)
+    })
+  }
+
+  parse(val, key) {
+    return val.map(e => {
+      e[key] = JSON.parse(e[key])
+      return e
+    })
+  }
+
+  split(val, key) {
+    return val.map(e => {
+      e[key] = e[key].split(",").map(item => item.trim())
+      return e
     })
   }
 
