@@ -42,6 +42,9 @@ export class ResumeService {
           acc.experience = val
         } else if (idx === 2) { // Projects
           val = this.parse(val, "style")
+          val = this.split(val, "images")
+          val = this.split(val, "clients")
+          console.log("Parsed val", val)
           acc.projects = val
         } else if (idx === 3) {
           acc.organizations = val

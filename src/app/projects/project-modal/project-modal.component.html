@@ -1,6 +1,10 @@
 <nz-modal [(nzVisible)]="isVisible" [nzTitle]="project ? project.name : ''" (nzOnCancel)=" handleCancel()">
-    <div>
-        <p>Modal Content</p>
+    <div *ngIf="project">
+        <nz-carousel nzEffect="scrollx">
+            <div nz-carousel-content class="content-padding" *ngFor="let image of project.images">
+                <img class="project-img" [src]="image">
+            </div>
+        </nz-carousel>
         <p>Modal Content</p>
         <p>Modal Content</p>
         <p>Modal Content</p>
