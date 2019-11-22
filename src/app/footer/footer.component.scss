@@ -1,0 +1,25 @@
+.icon {
+  border-radius: 100%;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  width: min-content;
+  min-width: 42px;
+  margin: 0 10px;
+}
+
+.icon:hover {
+  background-color: white;
+  color: #385f46;
+}
+
+.motto,
+.social-icons,
+.copy {
+  margin: 2em auto;
+}
+
+.background-gradient {
+  padding: 2em;
+}

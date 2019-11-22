@@ -14,6 +14,9 @@ body {
 section {
   text-align: center;
 }
+.center {
+  text-align: center;
+}
 
 @mixin width {
   max-width: 80%;
@@ -163,6 +166,10 @@ $grid-spacing-xl: 1.75em;
   box-sizing: border-box;
 }
 
+.flex-grid.center {
+  justify-content: center;
+}
+
 .grid-spacing-md.flex-grid {
   margin: -$grid-spacing-md;
 }
@@ -202,6 +209,7 @@ $grid-spacing-xl: 1.75em;
 $border: 3px;
 .btn {
   border-radius: 100%;
+  cursor: pointer;
 }
 
 .btn-primary {

@@ -15,6 +15,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { ProjectModalComponent } from './projects/project-modal/project-modal.component';
+import { FooterComponent } from './footer/footer.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -26,7 +27,8 @@ registerLocaleData(en);
     OrganizationsComponent,
     SideProjectsComponent,
     TestimonialsComponent,
-    ProjectModalComponent
+    ProjectModalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
