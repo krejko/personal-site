@@ -65,6 +65,7 @@ export class ResumeService {
 
   parse(val, key) {
     return val.map(e => {
+      console.log("JSON Parse", e[key])
       e[key] = JSON.parse(e[key])
       return e
     })
